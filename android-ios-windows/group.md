@@ -100,7 +100,7 @@ Format - Token [token]
 {% endswagger-response %}
 {% endswagger %}
 
-{% swagger baseUrl="SERVER_IP:PORT" path="/v1/user/data/group/detail/" method="get" summary="View Group detail" %}
+{% swagger baseUrl="SERVER_IP:PORT" path="/v1/user/data/group/detail/" method="post" summary="View Group detail" %}
 {% swagger-description %}
 View specfied group
 
@@ -166,7 +166,7 @@ Group's Code
 {% endswagger-response %}
 {% endswagger %}
 
-{% swagger baseUrl="SERVER_IP:PORT" path="/v1/user/data/group/detail/user" method="put" summary="Join Group" %}
+{% swagger baseUrl="SERVER_IP:PORT" path="/v1/user/data/group/detail/user/" method="put" summary="Join Group" %}
 {% swagger-description %}
 Join group
 

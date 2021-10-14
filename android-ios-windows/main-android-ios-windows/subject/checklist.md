@@ -4,7 +4,7 @@ description: 체크리스트 API
 
 # CheckList
 
-{% swagger baseUrl="SERVER_IP:PORT" path="/v1/user/data/subject/checklist/" method="get" summary="Get CheckList (체크리스트 가져오기)" %}
+{% swagger baseUrl="SERVER_IP:PORT" path="/v1/user/data/subject/checklist/" method="post" summary="Get CheckList (체크리스트 가져오기)" %}
 {% swagger-description %}
 유저의 체크리스트를 가져옵니다.
 {% endswagger-description %}

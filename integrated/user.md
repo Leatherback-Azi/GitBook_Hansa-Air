@@ -4,7 +4,7 @@ description: 유저 관리/로그인/회원가입
 
 # User
 
-{% swagger baseUrl="SERVER_IP:PORT" path="/v1/user/manage/signin/" method="get" summary="Sign Up/Sign In - Request E-mail Auth (회원가입/로그인, 이메일 인증 요청)" %}
+{% swagger baseUrl="SERVER_IP:PORT" path="/v1/user/manage/signin/" method="post" summary="Sign Up/Sign In - Request E-mail Auth (회원가입/로그인, 이메일 인증 요청)" %}
 {% swagger-description %}
 Request to send Auth Email, SignUp
 
@@ -74,7 +74,7 @@ When faild to send E-mail
 {% endswagger-response %}
 {% endswagger %}
 
-{% swagger baseUrl="SERVER_IP:PORT" path="/v1/user/manage/signin/" method="post" summary="Sign Up/Sign In - Auth via E-mail auth code (회원가입/로그인, 이메일 인증 코드로 인증하기)" %}
+{% swagger baseUrl="SERVER_IP:PORT" path="/v1/user/manage/signin/" method="put" summary="Sign Up/Sign In - Auth via E-mail auth code (회원가입/로그인, 이메일 인증 코드로 인증하기)" %}
 {% swagger-description %}
 Send auth code to sign up and get Token.
 

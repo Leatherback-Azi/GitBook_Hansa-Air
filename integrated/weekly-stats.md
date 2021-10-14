@@ -4,7 +4,7 @@ description: 주간 통계
 
 # Weekly Stats
 
-{% swagger baseUrl="SERVER_IP:PORT" path="/v1/user/data/stats/" method="get" summary="Get Stats of period" %}
+{% swagger baseUrl="SERVER_IP:PORT" path="/v1/user/data/stats/" method="post" summary="Get Stats of period" %}
 {% swagger-description %}
 get stats between of given dates including that days
 

@@ -4,7 +4,7 @@ description: 과목과 관련된 API를 담고 있습니다.
 
 # Subject
 
-{% swagger baseUrl="SERVER_IP:PORT" path="/v1/user/data/subject/" method="get" summary="Get subject list, info by date (과목 리스트, 정보 가져오기)" %}
+{% swagger baseUrl="SERVER_IP:PORT" path="/v1/user/data/subject/" method="post" summary="Get subject list, info by date (과목 리스트, 정보 가져오기)" %}
 {% swagger-description %}
 Get user's subjects
 
