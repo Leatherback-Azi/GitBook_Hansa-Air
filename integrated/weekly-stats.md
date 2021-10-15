@@ -66,7 +66,7 @@ end date of stats
                     {
                         "title": "국어",
                         "time": 10,
-                        "color": "#000000"
+                        "color": "#FFFFF0"
                     }
                 ],
                 "goal": 10000
@@ -83,7 +83,7 @@ end date of stats
                     {
                         "title": "국어",
                         "time": 10,
-                        "color": "#000000"
+                        "color": "#FFFFF0"
                     }
                 ],
                 "goal": 10000
@@ -115,7 +115,7 @@ end date of stats
                     {
                         "title": "국어",
                         "time": 10,
-                        "color": "#000000"
+                        "color": "#FFFFF0"
                     }
                 ],
                 "goal": 10000
@@ -132,7 +132,7 @@ end date of stats
                     {
                         "title": "국어",
                         "time": 10,
-                        "color": "#000000"
+                        "color": "#FFFFF0"
                     }
                 ],
                 "goal": 10000
