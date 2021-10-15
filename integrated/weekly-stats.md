@@ -47,7 +47,7 @@ end date of stats
 
 {% swagger-response status="200" description="Search completed검색 성공" %}
 ```
-
+{
     "status": 200,
     "detail": "OK",
     "data": {
