@@ -47,21 +47,21 @@ end date of stats
 
 {% swagger-response status="200" description="Search completed검색 성공" %}
 ```
-{
+
     "status": 200,
     "detail": "OK",
     "data": {
-        "totalTime": 3000,
-        "goals": 95,
+        "totalTime": 28051,
+        "goals": 40000,
         "stats": [
             {
                 "date": "2021-03-07",
-                "totalStudyTime": 40312,     // 총 공부시간
+                "totalStudyTime": 4312,
                 "subject": [
                     {
                         "title": "수학",
                         "time": 3,
-                        "color": "#ffffff"
+                        "color": "#5F79D3"
                     },
                     {
                         "title": "국어",
@@ -69,16 +69,16 @@ end date of stats
                         "color": "#000000"
                     }
                 ],
-                "goal": 10000                   // 목표시간
+                "goal": 10000
             },
             {
                 "date": "2021-03-08",
-                "totalStudyTime": 40312,     // 총 공부시간
+                "totalStudyTime": 2734,
                 "subject": [
                     {
                         "title": "수학",
                         "time": 3,
-                        "color": "#ffffff"
+                        "color": "#5F79D3"
                     },
                     {
                         "title": "국어",
@@ -86,16 +86,31 @@ end date of stats
                         "color": "#000000"
                     }
                 ],
-                "goal": 10000                   // 목표시간
+                "goal": 10000
             },
             {
+                "date": "2021-03-07"
+            },
+            {
+                "date": "2021-03-08"
+            },
+            {
+                "date": "2021-03-09"
+            },
+            {
+                "date": "2021-03-10"
+            },
+            {
+                "date": "2021-03-11"
+            },
+            {            
                 "date": "2021-03-12",
-                "totalStudyTime": 40312,     // 총 공부시간
+                "totalStudyTime": 7865,
                 "subject": [
                     {
                         "title": "수학",
                         "time": 3,
-                        "color": "#ffffff"
+                        "color": "#5F79D3"
                     },
                     {
                         "title": "국어",
@@ -103,16 +118,16 @@ end date of stats
                         "color": "#000000"
                     }
                 ],
-                "goal": 10000                   // 목표시간
+                "goal": 10000
             },
             {
                 "date": "2021-03-13",
-                "totalStudyTime": 40312,     // 총 공부시간
+                "totalStudyTime": 13140,
                 "subject": [
                     {
                         "title": "수학",
                         "time": 3,
-                        "color": "#ffffff"
+                        "color": "#5F79D3"
                     },
                     {
                         "title": "국어",
@@ -120,12 +135,11 @@ end date of stats
                         "color": "#000000"
                     }
                 ],
-                "goal": 10000                   // 목표시간
+                "goal": 10000
             }
         ]
     }
 }
-
 ```
 {% endswagger-response %}
 
