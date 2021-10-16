@@ -136,8 +136,8 @@ user's e-mail to auth
 5분 시간 제한이 초과 되었을 때" %}
 ```
 {
-    "status": 401,
-    "detail": "time limit exceeded (5min),
+    "status": 410,
+    "detail": "time limit exceeded (5min)",
     "data": {
         "token": ""
     }
@@ -199,7 +199,7 @@ User's new name (Korean, up to 7 chars, no spaces)
 {% endswagger-response %}
 {% endswagger %}
 
-{% swagger baseUrl="SERVER_IP:PORT" path="/v1/user/info/manage/basic/email/" method="put" summary="Modify User - E-mail (유저 이메일 수정)" %}
+{% swagger baseUrl="SERVER_IP:PORT" path="/v1/user/info/manage/basic/email/" method="post" summary="Modify User - E-mail request (유저 이메일 수정 요청)" %}
 {% swagger-description %}
 Modify user's e-mail
 
@@ -231,13 +231,17 @@ User's new e-mail
 유저의 새로운 이메일
 {% endswagger-parameter %}
 
-{% swagger-response status="200" description="When e-mail successfully edited
-이메일이 성공적으로 수정 되었을 때" %}
+{% swagger-response status="200" description="OK" %}
+이미 존재하는 이메일이 없고, 성공적으로 이메일이 전송 되었을 때
+
 ```
 {
     "status": 200,
     "detail": "OK",
-    "data": {}
+    "data": {
+        "isEmailExist": false,        
+        "emailSent": true           
+    }
 }
 ```
 {% endswagger-response %}
@@ -249,7 +253,10 @@ User's new e-mail
 {
     "status": 400,
     "detail": "Given email already Exists",
-    "data": {}
+    "data": {
+        "isEmailExist": true,        
+        "emailSent": false       
+    }
 }
 ```
 {% endswagger-response %}
@@ -260,6 +267,70 @@ User's new e-mail
 ```
 {
     "detail": "Invalid token." 
+}
+```
+{% endswagger-response %}
+{% endswagger %}
+
+{% swagger method="put" path="/v1/user/info/manage/basic/email/" baseUrl="SERVER_IP:PORT" summary="Modify User -  Auth via E-mail code (이메일 코드로 인증하기)" %}
+{% swagger-description %}
+
+{% endswagger-description %}
+
+{% swagger-parameter in="header" name="Content-Type" required="true" %}
+application/x-www-form-urlencoded
+{% endswagger-parameter %}
+
+{% swagger-parameter in="header" name="Authorization" required="true" %}
+Token [token]
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="" %}
+인증 코드가 맞았을 때
+
+```javascript
+{
+    "status": 200,
+    "detail": "OK",
+    "data": {
+        "token": "YOUR_TOKEN_HERE"
+    }
+}
+```
+{% endswagger-response %}
+
+{% swagger-response status="401: Unauthorized" description="" %}
+인증 코드가 틀렸을 때
+
+```javascript
+{
+    "status": 401,
+    "detail": "invalid auth code",
+    "data": {
+        "token": ""
+    }
+}
+```
+
+토큰이 유효하지 않을 때
+
+```json
+{
+    "detail": "Invalid token."
+}
+```
+{% endswagger-response %}
+
+{% swagger-response status="410: Gone" description="" %}
+5분 시간 제한이 초과 되었을 때
+
+```javascript
+{
+    "status": 410,
+    "detail": "time limit exceeded (5min)",
+    "data": {
+        "token": ""
+    }
 }
 ```
 {% endswagger-response %}
