@@ -242,8 +242,21 @@ User's new e-mail
 ```
 {% endswagger-response %}
 
-{% swagger-response status="401" description="When Token is invalid
-토큰이 유효하지 않을 때" %}
+{% swagger-response status="400: Bad Request" description="" %}
+같은 메일이 이미 존재 할 때
+
+```javascript
+{
+    "status": 400,
+    "detail": "Given email already Exists",
+    "data": {}
+}
+```
+{% endswagger-response %}
+
+{% swagger-response status="401" description="Unauthorized" %}
+잘못 된 토큰이 전달 되었을 때
+
 ```
 {
     "detail": "Invalid token." 
