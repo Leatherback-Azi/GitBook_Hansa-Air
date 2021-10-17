@@ -285,6 +285,10 @@ application/x-www-form-urlencoded
 Token [token]
 {% endswagger-parameter %}
 
+{% swagger-parameter in="body" name="auth" required="true" %}
+이메일로 보내진 인증 코드
+{% endswagger-parameter %}
+
 {% swagger-response status="200: OK" description="" %}
 인증 코드가 맞았을 때
 
@@ -292,9 +296,7 @@ Token [token]
 {
     "status": 200,
     "detail": "OK",
-    "data": {
-        "token": "YOUR_TOKEN_HERE"
-    }
+    "data": {}
 }
 ```
 {% endswagger-response %}
@@ -306,9 +308,7 @@ Token [token]
 {
     "status": 401,
     "detail": "invalid auth code",
-    "data": {
-        "token": ""
-    }
+    "data": {}
 }
 ```
 
@@ -328,9 +328,7 @@ Token [token]
 {
     "status": 410,
     "detail": "time limit exceeded (5min)",
-    "data": {
-        "token": ""
-    }
+    "data": {}
 }
 ```
 {% endswagger-response %}
