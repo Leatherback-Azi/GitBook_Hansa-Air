@@ -408,3 +408,35 @@ Token [token]
 ```
 {% endswagger-response %}
 {% endswagger %}
+
+{% swagger method="delete" path="/v1/user/info/manage/" baseUrl="SERVER_IP:PORT" summary="Alter User (유저 삭제)" %}
+{% swagger-description %}
+
+{% endswagger-description %}
+
+{% swagger-parameter in="header" name="Authorization" required="true" %}
+Token [token]
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="" %}
+유저가 성공적으로 삭제 되었을 때
+
+```javascript
+{
+    "status": 200,
+    "detail": "OK",
+    "data": {}
+}
+```
+{% endswagger-response %}
+
+{% swagger-response status="401: Unauthorized" description="" %}
+토큰이 유효하지 않을 때
+
+```javascript
+{
+    "detail": "Invalid token."
+}
+```
+{% endswagger-response %}
+{% endswagger %}
