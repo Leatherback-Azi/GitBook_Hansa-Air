@@ -376,3 +376,35 @@ Format - Token [token]
 ```
 {% endswagger-response %}
 {% endswagger %}
+
+{% swagger method="get" path="/v1/user/info/manage/basic/checktoken/" baseUrl="SERVER_IP:PORT" summary="Check Token Validation (토큰 유효성 검사)" %}
+{% swagger-description %}
+
+{% endswagger-description %}
+
+{% swagger-parameter in="header" name="Authorization" required="true" %}
+Token [token]
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="" %}
+토큰이 유효할 때
+
+```javascript
+{
+    "status": 200,
+    "detail": "Valid Token",
+    "data": {}
+}
+```
+{% endswagger-response %}
+
+{% swagger-response status="401: Unauthorized" description="" %}
+토큰이 유효하지 않을 때
+
+```javascript
+{
+    "detail": "Invalid token." 
+}
+```
+{% endswagger-response %}
+{% endswagger %}
