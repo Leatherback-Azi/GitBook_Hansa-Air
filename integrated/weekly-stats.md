@@ -89,19 +89,29 @@ end date of stats
                 "goal": 10000
             },
             {
-                "date": "2021-03-07"
+                "date": "2021-03-07",
+                "totalStudyTime": 0,
+                "subject: []
             },
             {
-                "date": "2021-03-08"
+                "date": "2021-03-08",
+                "totalStudyTime": 0,
+                "subject: []
             },
             {
-                "date": "2021-03-09"
+                "date": "2021-03-09",
+                "totalStudyTime": 0,
+                "subject: []
             },
             {
-                "date": "2021-03-10"
+                "date": "2021-03-10",
+                "totalStudyTime": 0,
+                "subject: []
             },
             {
-                "date": "2021-03-11"
+                "date": "2021-03-11",
+                "totalStudyTime": 0,
+                "subject: []
             },
             {            
                 "date": "2021-03-12",
