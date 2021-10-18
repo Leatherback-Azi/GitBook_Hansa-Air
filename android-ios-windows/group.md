@@ -184,12 +184,7 @@ Format - Token [token]
 application/x-www-form-urlencoded
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="GroupCode" type="string" required="true" %}
-Gruop's code
-
-\
-
-
+{% swagger-parameter in="query" name="GroupCode" type="string" required="true" %}
 그룹 코드
 {% endswagger-parameter %}
 

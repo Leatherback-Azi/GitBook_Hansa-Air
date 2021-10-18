@@ -134,12 +134,23 @@ Color of subject
 ```
 {% endswagger-response %}
 
-{% swagger-response status="400" description="When some values are missing
-값이 모두 들어오지 않았을 때" %}
+{% swagger-response status="400" description="Bad Request" %}
+일부 값이 들어오지 않았을 때
+
 ```
 {
     "status": 400,
     "detail": "Some values are missing",
+    "data": {}
+}
+```
+
+중복되는 이름의 과목이 존재할 때
+
+```
+{
+    "status": 400,
+    "detail": "Same subject is already exists",
     "data": {}
 }
 ```
@@ -178,12 +189,7 @@ Format - Token [token]
 형식 - Token [token]
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="title" type="string" required="true" %}
-Subject name
-
-\
-
-
+{% swagger-parameter in="query" name="title" type="string" required="true" %}
 과목 이름
 {% endswagger-parameter %}
 
@@ -241,30 +247,15 @@ Format - Token [token]
 형식 - Token [token]
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="title_new" type="string" %}
-New name of subject
-
-\
-
-
+{% swagger-parameter in="query" name="title_new" type="string" %}
 과목의 새 이름
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="title" type="string" required="true" %}
-Name of subject
-
-\
-
-
+{% swagger-parameter in="query" name="title" type="string" required="true" %}
 과목 이름
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="color" type="string" %}
-Color of subject
-
-\
-
-
+{% swagger-parameter in="query" name="color" type="string" %}
 과목의 색깔
 {% endswagger-parameter %}
 
