@@ -251,21 +251,11 @@ Format - Token [token]
 application/x-www-form-urlencoded
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="UserMail" type="string" required="true" %}
-User's E-mail which to be deleted
-
-\
-
-
+{% swagger-parameter in="query" name="UserMail" required="true" type="string" %}
 삭제할 유저의 E-mail
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="GroupCode" type="string" required="true" %}
-Group's code
-
-\
-
-
+{% swagger-parameter in="query" name="GroupCode" required="true" type="string" %}
 그룹 코드
 {% endswagger-parameter %}
 
