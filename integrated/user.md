@@ -84,25 +84,11 @@ Send auth code to sign up and get Token.
 (인증 코드를 보내고 회원가입 및 토큰을 받습니다.)
 {% endswagger-description %}
 
-{% swagger-parameter in="header" name="Content-Type" type="string" required="true" %}
-application/x-www-form-urlencoded
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="auth" type="string" required="true" %}
-auth code which sent to e-mail
-
-\
-
-
+{% swagger-parameter in="query" name="auth" type="string" required="true" %}
 이메일로 보내진 인증 코드
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="email" type="string" required="true" %}
-user's e-mail to auth
-
-\
-
-
+{% swagger-parameter in="query" name="email" type="string" required="true" %}
 인증할 유저의 이메일
 {% endswagger-parameter %}
 
@@ -156,10 +142,6 @@ Modify user's name
 유저의 이름 수정
 {% endswagger-description %}
 
-{% swagger-parameter in="header" name="Content-Type" type="string" required="true" %}
-application/x-www-form-urlencoded
-{% endswagger-parameter %}
-
 {% swagger-parameter in="header" name="Authorization" type="string" required="true" %}
 Format - Token [token]
 
@@ -169,7 +151,7 @@ Format - Token [token]
 형식 - Token [token]
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="name" type="string" %}
+{% swagger-parameter in="query" name="name" type="string" required="true" %}
 User's new name (Korean, up to 7 chars, no spaces)
 
 \
@@ -277,15 +259,11 @@ User's new e-mail
 
 {% endswagger-description %}
 
-{% swagger-parameter in="header" name="Content-Type" required="true" %}
-application/x-www-form-urlencoded
-{% endswagger-parameter %}
-
 {% swagger-parameter in="header" name="Authorization" required="true" %}
 Token [token]
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="auth" required="true" %}
+{% swagger-parameter in="query" name="auth" required="true" %}
 이메일로 보내진 인증 코드
 {% endswagger-parameter %}
 

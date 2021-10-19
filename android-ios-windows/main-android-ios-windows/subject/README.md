@@ -176,10 +176,6 @@ Delete specified subject
 사용자의 지정된 과목을 삭제하기
 {% endswagger-description %}
 
-{% swagger-parameter in="header" name="Content-Type" type="string" required="true" %}
-application/x-www-form-urlencoded
-{% endswagger-parameter %}
-
 {% swagger-parameter in="header" name="Authorization" type="string" required="true" %}
 Format - Token [token]
 
