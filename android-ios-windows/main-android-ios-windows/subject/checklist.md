@@ -17,7 +17,7 @@ Format - Token [token]
 application/x-www-form-urlencoded
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="Date" type="string" required="true" %}
+{% swagger-parameter in="body" name="date" type="string" required="true" %}
  조회할 날짜
 
 \
@@ -45,7 +45,7 @@ Format - YYYY-MM-DD
                         [
                             {
                                 "isitDone": false,
-                                "todo": "또 API Docs 작성하기. *깃북 쓰지 말 것"
+                                "todo": "뭐하지"
                             }
                         ]
                     },
