@@ -180,10 +180,6 @@ Join group
 Format - Token [token]
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="Content-Type" type="string" required="true" %}
-application/x-www-form-urlencoded
-{% endswagger-parameter %}
-
 {% swagger-parameter in="query" name="GroupCode" type="string" required="true" %}
 그룹 코드
 {% endswagger-parameter %}
@@ -245,10 +241,6 @@ Delete user from group
 
 {% swagger-parameter in="header" name="Authorization" type="string" required="true" %}
 Format - Token [token]
-{% endswagger-parameter %}
-
-{% swagger-parameter in="header" name="Content-Type" type="string" required="true" %}
-application/x-www-form-urlencoded
 {% endswagger-parameter %}
 
 {% swagger-parameter in="query" name="UserMail" required="true" type="string" %}

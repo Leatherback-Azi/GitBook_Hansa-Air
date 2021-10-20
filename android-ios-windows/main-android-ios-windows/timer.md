@@ -89,10 +89,6 @@ Stop user's timer
 사용자의 타이머를 정지하기
 {% endswagger-description %}
 
-{% swagger-parameter in="header" name="Content-Type" type="string" required="true" %}
-application/x-www-form-urlencoded
-{% endswagger-parameter %}
-
 {% swagger-parameter in="header" name="Authorization" type="string" required="true" %}
 Format - Token [token]
 
