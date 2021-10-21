@@ -53,10 +53,12 @@ end date of stats
     "data": {
         "totalTime": 28051,
         "goals": 40000,
+        "achievementRate": 45,
         "stats": [
             {
                 "date": "2021-03-07",
                 "totalStudyTime": 4312,
+                "achievementRate": 45,
                 "subject": [
                     {
                         "title": "수학",
@@ -74,6 +76,7 @@ end date of stats
             {
                 "date": "2021-03-08",
                 "totalStudyTime": 2734,
+                "achievementRate": 45,
                 "subject": [
                     {
                         "title": "수학",
@@ -91,31 +94,37 @@ end date of stats
             {
                 "date": "2021-03-07",
                 "totalStudyTime": 0,
+                "achievementRate": 0,
                 "subject: []
             },
             {
                 "date": "2021-03-08",
                 "totalStudyTime": 0,
+                "achievementRate": 0,
                 "subject: []
             },
             {
                 "date": "2021-03-09",
                 "totalStudyTime": 0,
+                "achievementRate": 0,
                 "subject: []
             },
             {
                 "date": "2021-03-10",
                 "totalStudyTime": 0,
+                "achievementRate": 45,
                 "subject: []
             },
             {
                 "date": "2021-03-11",
                 "totalStudyTime": 0,
+                "achievementRate": 45,
                 "subject: []
             },
             {            
                 "date": "2021-03-12",
                 "totalStudyTime": 7865,
+                "achievementRate": 45,
                 "subject": [
                     {
                         "title": "수학",
@@ -133,6 +142,7 @@ end date of stats
             {
                 "date": "2021-03-13",
                 "totalStudyTime": 13140,
+                "achievementRate": 45,
                 "subject": [
                     {
                         "title": "수학",
