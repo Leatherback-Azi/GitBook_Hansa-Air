@@ -32,6 +32,7 @@ Format - Token [token]
         "groupList": [
             {
                 "code": "G1AY56E7",
+                "userCount": 6
                 "leader": "서승우",
                 "firstPlace": "박상아",
                 "firstPlaceStudyTime": "4321"
