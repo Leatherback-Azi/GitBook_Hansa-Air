@@ -9,7 +9,7 @@
 
 {% endswagger-parameter %}
 
-{% swagger-parameter in="query" name="pk" %}
+{% swagger-parameter in="query" name="pk" required="true" %}
 
 {% endswagger-parameter %}
 
@@ -67,6 +67,59 @@
 ```javascript
 {
     "detail": "Invalid token."
+}
+```
+{% endswagger-response %}
+{% endswagger %}
+
+{% swagger method="get" path="/v1/user/data/post/like/" baseUrl="SERVER_IP:PORT" summary="좋아요 값 가져오기" %}
+{% swagger-description %}
+
+{% endswagger-description %}
+
+{% swagger-parameter in="query" name="pk" required="true" %}
+
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="" %}
+```javascript
+{
+    "status": 200,
+    "detial": "OK",
+    "data": {
+        "user": [
+            {
+                "email": "sangah0222@navver.com",
+                "username": "박상아"
+            },
+            {
+                "email": "yaz02110207@gmail.com",
+                "username": "서승우"
+            }
+        ]
+    }
+}
+```
+{% endswagger-response %}
+
+{% swagger-response status="400: Bad Request" description="" %}
+해당 글이 존재하지 않을 때
+
+```javascript
+{
+    "status": 400,
+    "detial": "No Exiting Post",
+    "data": {}
+}
+```
+
+일부 값이 전달되지 않았을 때
+
+```javascript
+{
+    "status": 400,
+    "detial": "Some Values are missing",
+    "data": {}
 }
 ```
 {% endswagger-response %}
