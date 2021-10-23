@@ -139,3 +139,64 @@ description: 댓글 관련 API를 기술합니다
 ```
 {% endswagger-response %}
 {% endswagger %}
+
+{% swagger method="get" path="/v1/user/data/post/comment/" baseUrl="SERVER_IP:PORT" summary="댓글 조회" %}
+{% swagger-description %}
+
+{% endswagger-description %}
+
+{% swagger-parameter in="query" name="pk" required="true" %}
+
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="" %}
+댓글 조회에 성공했을 시
+
+```javascript
+{
+    "status": 200,
+    "detail": "OK",
+    "data": {
+        "comments":[
+            {
+                "username": "박상아",
+                "userImage": "PROFILE_IMG_URL",
+                "postDate": "YYYY-MM-DD",
+                "content": "댓글 내용입니다.",
+                "idx": 1
+            },
+            {
+                "username": "김부성",
+                "userImage": "PROFILE_IMG_URL",
+                "postDate": "YYYY-MM-DD",
+                "content": "댓글 내용입니다.",
+                "idx": 2
+            }
+        ]
+    }
+}
+```
+{% endswagger-response %}
+
+{% swagger-response status="400: Bad Request" description="" %}
+해당 글이 존재하지 않을 때
+
+```javascript
+{
+    "status": 400,
+    "detial": "No Exiting post",
+    "data": {}
+}
+```
+
+일부 값이 전달되지 않았을 때
+
+```javascript
+{
+    "status": 400,
+    "detial": "Some Values are missing",
+    "data": {}
+}
+```
+{% endswagger-response %}
+{% endswagger %}
