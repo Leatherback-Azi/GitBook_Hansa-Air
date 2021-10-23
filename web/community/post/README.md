@@ -129,3 +129,106 @@ Token [token]
 ```
 {% endswagger-response %}
 {% endswagger %}
+
+{% swagger method="get" path="/v1/user/data/post" baseUrl="SERVER_IP:PORT" summary="글 조회" %}
+{% swagger-description %}
+
+{% endswagger-description %}
+
+{% swagger-parameter in="query" name="pk" %}
+
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="" %}
+글 조회에 성공했을 시 (pk값이 주어졌을 때)
+
+```javascript
+{
+    "status": 200,
+    "detail": "OK",
+    "data": {
+        "username": "박상아",
+        "userImage": "PROFILE_IMG_URL",
+        "postDate": "2021-10-14",
+        "startDate": "2021-10-07",
+        "endDate": "2021-10-14",
+        "achievementRate": [
+            100,
+            176,
+            98,
+            0,
+            32,
+            68,
+            79
+        ],
+        "calandarType": "week",  // month, week, day
+        "like": 36,
+        "idx": 2
+    }
+}
+```
+
+글 리스트 가져오기에 성공 했을 때 (pk값 없을 때)
+
+```javascript
+{
+    "status": 200,
+    "detail": "OK",
+    "data": {
+        "post":[
+            {
+                "username": "서승우",
+                "userImage": "PROFILE_IMG_URL",
+                "postDate": "2021-10-14",
+                "startDate": "2021-10-07",
+                "endDate": "2021-10-14",
+                "achievementRate": [
+                    100,
+                    176,
+                    98,
+                    0,
+                    32,
+                    68,
+                    79
+                ],
+                "calandarType": "week",  // month, week, day
+                "like": 36,
+                "idx": 1
+            },
+            {
+                "username": "박상아",
+                "userImage": "PROFILE_IMG_URL",
+                "postDate": "2021-10-14",
+                "startDate": "2021-10-07",
+                "endDate": "2021-10-14",
+                "achievementRate": [
+                    100,
+                    176,
+                    98,
+                    0,
+                    32,
+                    68,
+                    79
+                ],
+                "calandarType": "week",  // month, week, day
+                "like": 36,
+                "idx": 2
+            }
+        ]
+    }
+}
+```
+{% endswagger-response %}
+
+{% swagger-response status="400: Bad Request" description="" %}
+주어진 pk 값의 글이 없을 때
+
+```javascript
+{
+    "status": 400,
+    "detail": "There is no exiting post",
+    "data": {}
+}
+```
+{% endswagger-response %}
+{% endswagger %}
