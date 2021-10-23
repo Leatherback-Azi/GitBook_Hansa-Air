@@ -130,7 +130,7 @@ Token [token]
 {% endswagger-response %}
 {% endswagger %}
 
-{% swagger method="get" path="/v1/user/data/post" baseUrl="SERVER_IP:PORT" summary="글 조회" %}
+{% swagger method="get" path="/v1/user/data/post/" baseUrl="SERVER_IP:PORT" summary="글 조회" %}
 {% swagger-description %}
 
 {% endswagger-description %}
