@@ -19,7 +19,7 @@
 ```javascript
 {
     "status": 200,
-    "detial": "OK",
+    "detail": "OK",
     "data": {
         "isChecked": true,
     }
@@ -31,7 +31,7 @@
 ```javascript
 {
     "status": 200,
-    "detial": "OK",
+    "detail": "OK",
     "data": {
         "isChecked": false,
     }
@@ -45,7 +45,7 @@
 ```javascript
 {
     "status": 400,
-    "detial": "No Exiting Post",
+    "detail": "No Exiting Post",
     "data": {}
 }
 ```
@@ -55,7 +55,7 @@
 ```javascript
 {
     "status": 400,
-    "detial": "Some Values are missing",
+    "detail": "Some Values are missing",
     "data": {}
 }
 ```
@@ -85,7 +85,7 @@
 ```javascript
 {
     "status": 200,
-    "detial": "OK",
+    "detail": "OK",
     "data": {
         "user": [
             {
@@ -108,7 +108,7 @@
 ```javascript
 {
     "status": 400,
-    "detial": "No Exiting Post",
+    "detail": "No Exiting Post",
     "data": {}
 }
 ```
@@ -118,7 +118,7 @@
 ```javascript
 {
     "status": 400,
-    "detial": "Some Values are missing",
+    "detail": "Some Values are missing",
     "data": {}
 }
 ```

@@ -9,7 +9,7 @@
 ```javascript
 {
     "status": 200,
-    "detial": "OK",
+    "detail": "OK",
     "data": {
         "rank": [
             {

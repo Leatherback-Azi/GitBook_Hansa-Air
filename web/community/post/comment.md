@@ -31,7 +31,7 @@ description: 댓글 관련 API를 기술합니다
 ```javascript
 {
     "status": 200,
-    "detial": "OK",
+    "detail": "OK",
     "data": {
         "pk": 1
     }
@@ -45,7 +45,7 @@ description: 댓글 관련 API를 기술합니다
 ```javascript
 {
     "status": 400,
-    "detial": "No Exiting Post",
+    "detail": "No Exiting Post",
     "data": {}
 }
 ```
@@ -55,7 +55,7 @@ description: 댓글 관련 API를 기술합니다
 ```javascript
 {
     "status": 400,
-    "detial": "Some Values are missing",
+    "detail": "Some Values are missing",
     "data": {}
 }
 ```
@@ -91,7 +91,7 @@ description: 댓글 관련 API를 기술합니다
 ```javascript
 {
     "status": 200,
-    "detial": "OK",
+    "detail": "OK",
     "data": {}
 }
 ```
@@ -103,7 +103,7 @@ description: 댓글 관련 API를 기술합니다
 ```javascript
 {
     "status": 400,
-    "detial": "No Exiting comment",
+    "detail": "No Exiting comment",
     "data": {}
 }
 ```
@@ -113,7 +113,7 @@ description: 댓글 관련 API를 기술합니다
 ```javascript
 {
     "status": 400,
-    "detial": "Some Values are missing",
+    "detail": "Some Values are missing",
     "data": {}
 }
 ```
@@ -133,7 +133,7 @@ description: 댓글 관련 API를 기술합니다
 ```javascript
 {
     "status": 401,
-    "detial": "No Permission to Delete",
+    "detail": "No Permission to Delete",
     "data": {}
 }
 ```
@@ -184,7 +184,7 @@ description: 댓글 관련 API를 기술합니다
 ```javascript
 {
     "status": 400,
-    "detial": "No Exiting post",
+    "detail": "No Exiting post",
     "data": {}
 }
 ```
@@ -194,7 +194,7 @@ description: 댓글 관련 API를 기술합니다
 ```javascript
 {
     "status": 400,
-    "detial": "Some Values are missing",
+    "detail": "Some Values are missing",
     "data": {}
 }
 ```

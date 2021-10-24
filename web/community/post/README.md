@@ -31,7 +31,7 @@ month, week, day
 ```javascript
 {
     "status": 200,
-    "detial": "OK",
+    "detail": "OK",
     "data": {
         "pk": 1
     }
@@ -45,7 +45,7 @@ month, week, day
 ```javascript
 {
     "status": 400,
-    "detial": "Some Values are missing",
+    "detail": "Some Values are missing",
     "data": {}
 }
 ```
@@ -81,7 +81,7 @@ Token [token]
 ```javascript
 {
     "status": 200,
-    "detial": "OK",
+    "detail": "OK",
     "data": {}
 }
 ```
@@ -93,7 +93,7 @@ Token [token]
 ```javascript
 {
     "status": 400,
-    "detial": "No Exiting Post",
+    "detail": "No Exiting Post",
     "data": {}
 }
 ```
@@ -103,7 +103,7 @@ Token [token]
 ```javascript
 {
     "status": 400,
-    "detial": "Some Values are missing",
+    "detail": "Some Values are missing",
     "data": {}
 }
 ```
@@ -123,7 +123,7 @@ Token [token]
 ```javascript
 {
     "status": 401,
-    "detial": "No Permission to Delete",
+    "detail": "No Permission to Delete",
     "data": {}
 }
 ```
