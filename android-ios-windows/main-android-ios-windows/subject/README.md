@@ -113,6 +113,16 @@ if empty, returns today's info
 }
 ```
 {% endswagger-response %}
+
+{% swagger-response status="401: Unauthorized" description="" %}
+잘못 된 토큰이 주어졌을 때
+
+```javascript
+{
+    "detail": "Invalid token."
+}
+```
+{% endswagger-response %}
 {% endswagger %}
 
 {% swagger baseUrl="SERVER_IP:PORT" path="/v1/user/data/subject/manage/" method="post" summary="Make Subject (과목 만들기)" %}
