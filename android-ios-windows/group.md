@@ -115,7 +115,7 @@ View specfied group
 application/x-www-form-urlencoded
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="GroupCode" type="string" required="true" %}
+{% swagger-parameter in="body" name="groupCode" type="string" required="true" %}
 Group's Code
 
 \
@@ -181,7 +181,7 @@ Join group
 Format - Token [token]
 {% endswagger-parameter %}
 
-{% swagger-parameter in="query" name="GroupCode" type="string" required="true" %}
+{% swagger-parameter in="query" name="groupCode" type="string" required="true" %}
 그룹 코드
 {% endswagger-parameter %}
 
@@ -244,11 +244,11 @@ Delete user from group
 Format - Token [token]
 {% endswagger-parameter %}
 
-{% swagger-parameter in="query" name="UserMail" required="true" type="string" %}
+{% swagger-parameter in="query" name="userMail" required="true" type="string" %}
 삭제할 유저의 E-mail
 {% endswagger-parameter %}
 
-{% swagger-parameter in="query" name="GroupCode" required="true" type="string" %}
+{% swagger-parameter in="query" name="groupCode" required="true" type="string" %}
 그룹 코드
 {% endswagger-parameter %}
 
