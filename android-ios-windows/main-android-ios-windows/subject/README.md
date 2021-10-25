@@ -4,7 +4,7 @@ description: 과목과 관련된 API를 담고 있습니다.
 
 # Subject
 
-{% swagger baseUrl="SERVER_IP:PORT" path="/v1/user/data/subject/" method="post" summary="Get subject list, info by date (과목 리스트, 정보 가져오기)" %}
+{% swagger baseUrl="SERVER_IP:PORT" path="/v1/user/data/subject/history/" method="post" summary="과목 리스트, 정보 가져오기 (기록)" %}
 {% swagger-description %}
 Get user's subjects
 
@@ -43,6 +43,7 @@ if empty, returns today's info
     "status": 200,
     "detail": "OK",
     "data": {
+        "totalTime": 13,
         "subject": [
             {
                 "title": "수학",
@@ -77,6 +78,38 @@ if empty, returns today's info
 ```
 {
     "detail": "Invalid token."
+}
+```
+{% endswagger-response %}
+{% endswagger %}
+
+{% swagger method="get" path="/v1/user/data/subject/" baseUrl="SERVER_IP:PORT" summary="사용자의 과목 리스트 가져오기" %}
+{% swagger-description %}
+
+{% endswagger-description %}
+
+{% swagger-parameter in="header" name="Authorization" required="true" %}
+
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="" %}
+```javascript
+{
+    "status": 200,
+    "detail": "OK",
+    "data": {
+        "subject": [
+            {
+                "title": "수학",
+                "color": "#ffffff"
+            },
+            {
+                "title": "국어",
+                "color": "#000000"
+            }
+        ],
+        "goal": 10
+    }
 }
 ```
 {% endswagger-response %}
