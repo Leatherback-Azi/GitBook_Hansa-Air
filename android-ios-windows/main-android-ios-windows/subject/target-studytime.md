@@ -52,8 +52,34 @@ description: 목표시간 설정 관련 API를 담고 있습니다.
 {% endswagger-response %}
 {% endswagger %}
 
-{% swagger method="get" path="/v1/user/data/subject/targettime/" baseUrl="SERVER_IP:PORT" summary="" %}
+{% swagger method="get" path="/v1/user/data/subject/targettime/" baseUrl="SERVER_IP:PORT" summary="목표시간 가져오기" %}
 {% swagger-description %}
 
 {% endswagger-description %}
+
+{% swagger-parameter in="header" name="Authorization" required="true" %}
+
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="" %}
+```javascript
+{
+    "status": 200,
+    "detail": "OK",
+    "data": {
+        "targetTime": 1000
+    }
+}
+```
+{% endswagger-response %}
+
+{% swagger-response status="401: Unauthorized" description="" %}
+토큰이 잘못 되었을 때
+
+```javascript
+{
+    "detail": "Invalid token."
+}
+```
+{% endswagger-response %}
 {% endswagger %}
