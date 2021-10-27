@@ -95,33 +95,38 @@ end date of stats
                 "date": "2021-03-07",
                 "totalStudyTime": 0,
                 "achievementRate": 0,
-                "subject: []
+                "subject": [],
+                "goal": 0
             },
             {
                 "date": "2021-03-08",
                 "totalStudyTime": 0,
                 "achievementRate": 0,
-                "subject: []
+                "subject": [],
+                "goal": 0
             },
             {
                 "date": "2021-03-09",
                 "totalStudyTime": 0,
                 "achievementRate": 0,
-                "subject: []
+                "subject": [],
+                "goal": 0
             },
             {
                 "date": "2021-03-10",
                 "totalStudyTime": 0,
                 "achievementRate": 45,
-                "subject: []
+                "subject": [],
+                "goal": 0
             },
             {
                 "date": "2021-03-11",
                 "totalStudyTime": 0,
                 "achievementRate": 45,
-                "subject: []
+                "subject": [],
+                "goal": 0
             },
-            {            
+            {
                 "date": "2021-03-12",
                 "totalStudyTime": 7865,
                 "achievementRate": 45,
