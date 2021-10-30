@@ -1,10 +1,10 @@
 ---
-description: 체크리스트 API
+description: 투두리스트 API
 ---
 
-# CheckList
+# TodoList
 
-{% swagger baseUrl="SERVER_IP:PORT" path="/v1/user/data/subject/checklist/" method="post" summary="Get CheckList (체크리스트 가져오기)" %}
+{% swagger baseUrl="SERVER_IP:PORT" path="/v1/user/data/subject/checklist/" method="post" summary="Get TodoList (투두리스트 가져오기)" %}
 {% swagger-description %}
 유저의 체크리스트를 가져옵니다.
 {% endswagger-description %}
@@ -33,35 +33,28 @@ Format - YYYY-MM-DD
     "status": 200,
     "detail": "OK",
     "data": {
-        "dateList":[
+        "date": "YYYY-MM-DD",
+        "memo": "잠이 오네요",
+        "subjects": [ 
             {
-                "date": "YYYY-MM-DD",
-                "memo": "잠이 오네요",
-                "subjects":
-                [ 
+                "subject": "프실",
+                "todoList": [
                     {
-                        "subject": "프실",
-                        "todoList":
-                        [
-                            {
-                                "isitDone": false,
-                                "todo": "뭐하지"
-                            }
-                        ]
-                    },
-                    {
-                        "subject": "한사랑공기",
-                        "todoList":
-                        [
-                            {
-                                "isitDone": false,
-                                "todo": "TestMockServer 만들어서 AWS에 올리기"
-                            }
-                        ]
+                        "isitDone": false,
+                        "todo": "뭐하지"
                     }
                 ]
             },
-        ],
+            {
+                "subject": "한사랑공기",
+                "todoList": [
+                    {
+                        "isitDone": false,
+                        "todo": "TestMockServer 만들어서 AWS에 올리기"
+                    }
+                ]
+            }
+        ]
     }
 }
 ```
