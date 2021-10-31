@@ -4,7 +4,7 @@ description: 투두리스트 API
 
 # TodoList
 
-{% swagger baseUrl="SERVER_IP:PORT" path="/v1/user/data/subject/checklist/" method="post" summary="Get TodoList (투두리스트 가져오기)" %}
+{% swagger baseUrl="SERVER_IP:PORT" path="/v1/user/data/subject/checklist/" method="get" summary="Get TodoList (투두리스트 가져오기)" %}
 {% swagger-description %}
 유저의 체크리스트를 가져옵니다.
 {% endswagger-description %}
@@ -13,11 +13,7 @@ description: 투두리스트 API
 Format - Token [token]
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="Content-Type" type="string" required="true" %}
-application/x-www-form-urlencoded
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="date" type="string" required="true" %}
+{% swagger-parameter in="query" name="date" type="string" required="true" %}
  조회할 날짜
 
 \
@@ -81,3 +77,58 @@ Format - YYYY-MM-DD
 {% endswagger-response %}
 {% endswagger %}
 
+{% swagger method="post" path="/v1/user/data/subject/checklist/" baseUrl="SERVER_IP:PORT" summary="Post TodoList (투두리스트 등록하기)" %}
+{% swagger-description %}
+
+{% endswagger-description %}
+
+{% swagger-parameter in="header" name="Content-Type" required="true" %}
+
+{% endswagger-parameter %}
+
+{% swagger-parameter in="header" name="Authorization" required="true" %}
+
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="subject" required="true" %}
+
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="date" %}
+
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="" %}
+성공적으로 등록 되었을 때
+
+```javascript
+{
+    "status": 200,
+    "detail": "OK",
+    "data": {}
+}
+```
+{% endswagger-response %}
+
+{% swagger-response status="400: Bad Request" description="" %}
+잘못된 날짜가 주어졌을 때
+
+```javascript
+{
+    "status": 400,
+    "detail": "invalid date given",
+    "data": {}
+}
+```
+
+일부 값이 주어지지 않았을 때
+
+```javascript
+{
+    "status": 400,
+    "detail": "Some values are missing",
+    "data": {}
+}
+```
+{% endswagger-response %}
+{% endswagger %}
