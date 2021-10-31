@@ -98,7 +98,7 @@ Format - YYYY-MM-DD
 
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="todo" %}
+{% swagger-parameter in="body" name="todo" required="true" %}
 
 {% endswagger-parameter %}
 
