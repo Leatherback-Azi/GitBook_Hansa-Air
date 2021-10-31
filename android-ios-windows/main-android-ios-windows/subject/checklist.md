@@ -77,7 +77,7 @@ Format - YYYY-MM-DD
 {% endswagger-response %}
 {% endswagger %}
 
-{% swagger method="post" path="/v1/user/data/subject/checklist/" baseUrl="SERVER_IP:PORT" summary="Post TodoList (투두리스트 등록하기)" %}
+{% swagger method="post" path="/v1/user/data/subject/checklist/" baseUrl="SERVER_IP:PORT" summary="Post/Modify TodoList (투두리스트 등록 및 수정하기)" %}
 {% swagger-description %}
 
 {% endswagger-description %}
@@ -95,6 +95,10 @@ Format - YYYY-MM-DD
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="date" %}
+
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="todo" %}
 
 {% endswagger-parameter %}
 
@@ -128,6 +132,82 @@ Format - YYYY-MM-DD
     "status": 400,
     "detail": "Some values are missing",
     "data": {}
+}
+```
+{% endswagger-response %}
+
+{% swagger-response status="401: Unauthorized" description="" %}
+토큰이 잘못 되었을 때
+
+```javascript
+{
+    "detail": "Invalid token."
+}
+```
+{% endswagger-response %}
+{% endswagger %}
+
+{% swagger method="post" path="/v1/user/data/subject/checklist/memo/" baseUrl="SERVER_IP:PORT" summary="Post/Modify Memo (메모 수정 또는 등록하기)" %}
+{% swagger-description %}
+
+{% endswagger-description %}
+
+{% swagger-parameter in="header" name="Conetent-Type" required="true" %}
+
+{% endswagger-parameter %}
+
+{% swagger-parameter in="header" name="Authorization" required="true" %}
+
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="date" %}
+
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="memo" required="true" %}
+
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="" %}
+성공적으로 등록 되었을 때
+
+```javascript
+{
+    "status": 200,
+    "detail": "OK",
+    "data": {}
+}
+```
+{% endswagger-response %}
+
+{% swagger-response status="400: Bad Request" description="" %}
+잘못된 날짜가 주어졌을 때
+
+```javascript
+{
+    "status": 400,
+    "detail": "invalid date given",
+    "data": {}
+}
+```
+
+일부 값이 주어지지 않았을 때
+
+```javascript
+{
+    "status": 400,
+    "detail": "Some values are missing",
+    "data": {}
+}
+```
+{% endswagger-response %}
+
+{% swagger-response status="401" description="" %}
+토큰이 잘못 되었을 때
+
+```javascript
+{
+    "detail": "Invalid token."
 }
 ```
 {% endswagger-response %}
