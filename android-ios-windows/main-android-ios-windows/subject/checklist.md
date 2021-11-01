@@ -36,6 +36,7 @@ Format - YYYY-MM-DD
                 "subject": "프실",
                 "todoList": [
                     {
+                        "pk": 1,
                         "isitDone": false,
                         "todo": "뭐하지"
                     }
@@ -45,6 +46,7 @@ Format - YYYY-MM-DD
                 "subject": "한사랑공기",
                 "todoList": [
                     {
+                        "pk": 4,
                         "isitDone": false,
                         "todo": "TestMockServer 만들어서 AWS에 올리기"
                     }
@@ -77,7 +79,7 @@ Format - YYYY-MM-DD
 {% endswagger-response %}
 {% endswagger %}
 
-{% swagger method="post" path="/v1/user/data/subject/checklist/" baseUrl="SERVER_IP:PORT" summary="Post/Modify TodoList (투두리스트 등록 및 수정하기)" %}
+{% swagger method="post" path="/v1/user/data/subject/checklist/" baseUrl="SERVER_IP:PORT" summary="Post TodoList (투두리스트 등록하기)" %}
 {% swagger-description %}
 
 {% endswagger-description %}
