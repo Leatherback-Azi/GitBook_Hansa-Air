@@ -149,6 +149,78 @@ Format - YYYY-MM-DD
 {% endswagger-response %}
 {% endswagger %}
 
+{% swagger method="get" path="/v1/user/data/subject/checklist/status/" baseUrl="SERVER_IP:PORT" summary="투두리스트 상태 변경" %}
+{% swagger-description %}
+
+{% endswagger-description %}
+
+{% swagger-parameter in="query" name="pk" required="true" %}
+
+{% endswagger-parameter %}
+
+{% swagger-parameter in="header" name="Authorization" required="true" %}
+
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="" %}
+성공적으로 변경 되었을 때
+
+(완료 체크시 true, 체크 해제시 false)
+
+```javascript
+{
+    "status": 200,
+    "detail": "OK",
+    "data": {
+        "isitDone": true
+    }
+}
+```
+{% endswagger-response %}
+
+{% swagger-response status="400: Bad Request" description="" %}
+해당 pk의 체크리스트가 존재하지 않을 시
+
+```javascript
+{
+    "status": 400,
+    "detail": "There's no checklist",
+    "data": {}
+}
+```
+
+잘못된 날짜가 주어졌을 때
+
+```javascript
+{
+    "status": 400,
+    "detail": "invalid date given",
+    "data": {}
+}
+```
+
+일부 값이 주어지지 않았을 때
+
+```javascript
+{
+    "status": 400,
+    "detail": "Some values are missing",
+    "data": {}
+}
+```
+{% endswagger-response %}
+
+{% swagger-response status="401: Unauthorized" description="" %}
+토큰이 잘못 되었을 때
+
+```javascript
+{
+    "detail": "Invalid token."
+}
+```
+{% endswagger-response %}
+{% endswagger %}
+
 {% swagger method="post" path="/v1/user/data/subject/checklist/memo/" baseUrl="SERVER_IP:PORT" summary="Post/Modify Memo (메모 수정 또는 등록하기)" %}
 {% swagger-description %}
 
@@ -204,7 +276,7 @@ Format - YYYY-MM-DD
 ```
 {% endswagger-response %}
 
-{% swagger-response status="401" description="" %}
+{% swagger-response status="401: Unauthorized" description="" %}
 토큰이 잘못 되었을 때
 
 ```javascript
