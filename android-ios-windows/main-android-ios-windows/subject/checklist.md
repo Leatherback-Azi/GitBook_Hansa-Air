@@ -13,7 +13,7 @@ description: 투두리스트 API
 Format - Token [token]
 {% endswagger-parameter %}
 
-{% swagger-parameter in="query" name="date" type="string" required="true" %}
+{% swagger-parameter in="query" name="date" type="string" required="false" %}
  조회할 날짜
 
 \
