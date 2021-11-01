@@ -149,7 +149,7 @@ Format - YYYY-MM-DD
 {% endswagger-response %}
 {% endswagger %}
 
-{% swagger method="get" path="/v1/user/data/subject/checklist/status/" baseUrl="SERVER_IP:PORT" summary="투두리스트 상태 변경" %}
+{% swagger method="put" path="/v1/user/data/subject/checklist/status/" baseUrl="SERVER_IP:PORT" summary="투두리스트 상태 변경" %}
 {% swagger-description %}
 
 {% endswagger-description %}
