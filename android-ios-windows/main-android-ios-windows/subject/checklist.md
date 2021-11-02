@@ -325,7 +325,7 @@ Format - YYYY-MM-DD
 {% endswagger-response %}
 
 {% swagger-response status="400: Bad Request" description="" %}
-잘못된 날짜가 주어졌을 때
+잘못된 날짜가 주어졌을 때 또는 당일에 공부한 시간이 없거나, 투두리스트 혹은 메모를 작성한 내역이 없을 때
 
 ```javascript
 {
