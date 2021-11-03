@@ -88,7 +88,11 @@ Format - YYYY-MM-DD
 
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="Authorization" required="true" %}
+{% swagger-parameter in="header" name="Authorization" required="true" type="String" %}
+
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="todo" required="true" type="String" %}
 
 {% endswagger-parameter %}
 
