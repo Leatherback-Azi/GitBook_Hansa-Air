@@ -34,6 +34,7 @@ Format - Token [token]
                 "code": "G1AY56E7",
                 "userCount": 6,
                 "leader": "서승우",
+                "leaderEmail": "yaz02110207@gmail.com",
                 "firstPlace": "박상아",
                 "firstPlaceStudyTime": "4321"
             },
