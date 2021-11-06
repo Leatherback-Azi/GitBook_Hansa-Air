@@ -388,8 +388,9 @@ Format - Token [token]
 ```
 {% endswagger-response %}
 
-{% swagger-response status="404" description="When can't find user
-사용자를 찾지 못 하였을 때" %}
+{% swagger-response status="404" description="사용자를 찾지 못 하였을 때" %}
+그룹에서 사용자를 찾지 못 하였을 때
+
 ```
 {
     "status": 200,
