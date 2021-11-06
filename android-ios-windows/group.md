@@ -311,6 +311,8 @@ Token [token]
 {% endswagger-response %}
 
 {% swagger-response status="409: Conflict" description="" %}
+해당 그룹이 없거나 해당 그룹에 참가된 상태가 아닐 때
+
 ```javascript
 {
     "status": 409,
