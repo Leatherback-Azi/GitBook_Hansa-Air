@@ -102,6 +102,50 @@ Format - Token [token]
 {% endswagger-response %}
 {% endswagger %}
 
+{% swagger method="delete" path="/v1/user/data/group/" baseUrl="SERVER_IP:PORT" summary="Delete User Group" %}
+{% swagger-description %}
+
+{% endswagger-description %}
+
+{% swagger-parameter in="header" name="Authorization" type="String" required="true" %}
+Token [token]
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="" %}
+성공적으로 삭제 되었을 때
+
+```javascript
+{
+    "status": 200,
+    "detail": "OK",
+    "data": {}
+}
+```
+{% endswagger-response %}
+
+{% swagger-response status="401: Unauthorized" description="" %}
+토큰이 잘못 되었을 때
+
+```javascript
+{
+    "detail": "Invalid token." 
+}
+```
+{% endswagger-response %}
+
+{% swagger-response status="409: Conflict" description="" %}
+그룹이 없거나 이미 삭제되었을 때
+
+```javascript
+{
+    "status": 409,
+    "detail": "There is no Group",
+    "data": {}
+}
+```
+{% endswagger-response %}
+{% endswagger %}
+
 {% swagger baseUrl="SERVER_IP:PORT" path="/v1/user/data/group/detail/" method="post" summary="View Group detail" %}
 {% swagger-description %}
 View specfied group
@@ -246,7 +290,7 @@ Format - Token [token]
 {% endswagger-parameter %}
 
 {% swagger-parameter in="query" name="userMail" required="true" type="string" %}
-삭제할 유저의 E-mail, 없을 시 해당 그룹 탈퇴
+삭제할 유저의 E-mail
 {% endswagger-parameter %}
 
 {% swagger-parameter in="query" name="groupCode" required="true" type="string" %}
