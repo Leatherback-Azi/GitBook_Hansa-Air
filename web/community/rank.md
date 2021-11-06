@@ -1,6 +1,6 @@
 # Rank
 
-{% swagger method="get" path="/v1/user/data/rank" baseUrl="SERVER_IP:PORT" summary="랭크 가져오기" %}
+{% swagger method="get" path="/v1/user/data/rank/" baseUrl="SERVER_IP:PORT" summary="랭크 가져오기" %}
 {% swagger-description %}
 
 {% endswagger-description %}
