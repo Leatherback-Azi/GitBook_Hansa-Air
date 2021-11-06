@@ -320,6 +320,16 @@ Token [token]
     "data": {}
 }
 ```
+
+그룹장이 탈퇴하려 시도 할 때
+
+```javascript
+{
+    "status": 409,
+    "detail": "Cannot Exit",
+    "data": {}
+}
+```
 {% endswagger-response %}
 {% endswagger %}
 
