@@ -246,7 +246,7 @@ Format - Token [token]
 {% endswagger-parameter %}
 
 {% swagger-parameter in="query" name="userMail" required="true" type="string" %}
-삭제할 유저의 E-mail
+삭제할 유저의 E-mail, 없을 시 해당 그룹 탈퇴
 {% endswagger-parameter %}
 
 {% swagger-parameter in="query" name="groupCode" required="true" type="string" %}
