@@ -333,14 +333,14 @@ Token [token]
 {% endswagger-response %}
 {% endswagger %}
 
-{% swagger baseUrl="SERVER_IP:PORT" path="/v1/user/data/group/detail/user/manage/" method="delete" summary="Delete Group user" %}
+{% swagger baseUrl="SERVER_IP:PORT" path="/v1/user/data/group/detail/user/manage/" method="delete" summary="Remove Group user" %}
 {% swagger-description %}
-Delete user from group
+Remove user from group
 
 \
 
 
-그룹에서 사용자 삭제하기
+그룹에서 사용자 추방하기
 {% endswagger-description %}
 
 {% swagger-parameter in="header" name="Authorization" type="string" required="true" %}
@@ -368,11 +368,22 @@ Format - Token [token]
 ```
 {% endswagger-response %}
 
-{% swagger-response status="401" description="When Token in invalid
-토큰이 유효하지 않을 때" %}
-```
+{% swagger-response status="401: Unauthorized" description="" %}
+토큰이 유효하지 않을 때
+
+```javascript
 {
     "detail": "Invalid token." 
+}
+```
+
+권한이 없을 때
+
+```javascript
+{
+    "status": 401,
+    "detail": "Unauthorized",
+    "data": {}
 }
 ```
 {% endswagger-response %}
@@ -383,6 +394,28 @@ Format - Token [token]
 {
     "status": 200,
     "detail": "User not found"
+    "data": {}
+}
+```
+{% endswagger-response %}
+
+{% swagger-response status="409: Conflict" description="" %}
+해당 그룹이 없거나 해당 그룹에 참가된 상태가 아닐 때
+
+```javascript
+{
+    "status": 409,
+    "detail": "There is no Group",
+    "data": {}
+}
+```
+
+자기 자신을 추방하려 할 때
+
+```javascript
+{
+    "status": 409,
+    "detail": "Cannot Exit",
     "data": {}
 }
 ```
