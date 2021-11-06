@@ -161,7 +161,7 @@ Token [token]
             68,
             79
         ],
-        "calandarType": "week",  // month, week, day
+        "calendarType": "week",  // month, week, day
         "like": 36,
         "idx": 2
     }
@@ -191,7 +191,7 @@ Token [token]
                     68,
                     79
                 ],
-                "calandarType": "week",  // month, week, day
+                "calendarType": "week",  // month, week, day
                 "like": 36,
                 "idx": 1
             },
@@ -210,7 +210,7 @@ Token [token]
                     68,
                     79
                 ],
-                "calandarType": "week",  // month, week, day
+                "calendarType": "week",  // month, week, day
                 "like": 36,
                 "idx": 2
             }
