@@ -312,7 +312,7 @@ Token [token]
 {% endswagger-response %}
 {% endswagger %}
 
-{% swagger baseUrl="SERVER_IP:PORT" path="/v1/user/info/basic/" method="get" summary="Get user info - Basic (유저 기본 정보 받아오기)" %}
+{% swagger baseUrl="SERVER_IP:PORT" path="/v1/user/manage/info/basic/" method="get" summary="Get user info - Basic (유저 기본 정보 받아오기)" %}
 {% swagger-description %}
 Get user's basic info (e-mail, name)
 
