@@ -15,11 +15,26 @@ Token [token]
     "status": 200,
     "detail": "OK",
     "data": {
-        "userRank": "1"
+        "myInfo": {
+            "rank": 1,
+            "username": "박상아",
+            "usermail": "sangah0222@naver.com",
+            "totalStudyTime": 60000,
+            "achievementRate": [
+                100,
+                176,
+                98,
+                0,
+                32,
+                68,
+                79
+            ]
+        },
         "rank": [
             {
                 "rank": 1,
                 "username": "박상아",
+                "usermail": "sangah0222@naver.com",
                 "totalStudyTime": 60000,
                 "achievementRate": [
                     100,
@@ -34,6 +49,7 @@ Token [token]
             {
                 "rank": 2,
                 "username": "서승우",
+                "usermail": "yaz02110207@gmail.com"
                 "totalStudyTime": 50000,
                 "achievementRate": [
                     100,
