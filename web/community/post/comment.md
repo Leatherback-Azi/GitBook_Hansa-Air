@@ -157,6 +157,7 @@ description: 댓글 관련 API를 기술합니다
     "status": 200,
     "detail": "OK",
     "data": {
+        "count": 2,
         "comments":[
             {
                 "username": "박상아",

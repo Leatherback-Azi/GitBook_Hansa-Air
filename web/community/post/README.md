@@ -175,6 +175,7 @@ Token [token]
     "status": 200,
     "detail": "OK",
     "data": {
+        "count": 2,
         "post":[
             {
                 "username": "서승우",
