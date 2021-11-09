@@ -223,6 +223,64 @@ Format - YYYY-MM-DD
 {% endswagger-response %}
 {% endswagger %}
 
+{% swagger method="delete" path="/v1/user/data/subject/checklist/" baseUrl="SERVER_IP:PORT" summary="Delete TodoList (투두리스트 삭제하기)" %}
+{% swagger-description %}
+
+{% endswagger-description %}
+
+{% swagger-parameter in="header" name="pk" type="String" required="true" %}
+투두리스트의 pk
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="Authorization" type="String" %}
+Token [token]
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="" %}
+```javascript
+{
+    "status": 200,
+    "detail": "OK",
+    "data": {}
+}
+```
+{% endswagger-response %}
+
+{% swagger-response status="400: Bad Request" description="" %}
+일부 값이 주어지지 않았을 때
+
+```javascript
+{
+    "status": 400,
+    "detail": "Some values are missing",
+    "data": {}
+}
+```
+
+해당 pk의 체크리스트가 존재하지 않을 시
+
+```javascript
+{
+    "status": 400,
+    "detail": "There's no checklist",
+    "data": {}
+}
+```
+{% endswagger-response %}
+
+{% swagger-response status="401: Unauthorized" description="" %}
+토큰이 잘못 되었을 때
+
+```javascript
+{
+    "status": 401,
+    "detail": "Invalid token.",
+    "data": {}
+}
+```
+{% endswagger-response %}
+{% endswagger %}
+
 {% swagger method="put" path="/v1/user/data/subject/checklist/status/" baseUrl="SERVER_IP:PORT" summary="투두리스트 상태 변경" %}
 {% swagger-description %}
 
